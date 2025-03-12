@@ -248,9 +248,15 @@ func main() {
 		_ = a.OpenURL(bugURL)
 	}
 
-	// Open "Lapor Bug" link
+	// Open "Check For Update" link
 	openUpdateFile := func() {
 		bugURL, _ := url.Parse("https://your-bug-report-url.com")
+		_ = a.OpenURL(bugURL)
+	}
+
+	// Open "Update Menu" Link
+	openPanduanFile := func() {
+		bugURL, _ := url.Parse("https://drive.google.com/file/d/1Do0Jj1GZcRNb4vu-XYJsZDKu_GLFxM6q/view?usp=drive_link")
 		_ = a.OpenURL(bugURL)
 	}
 
@@ -259,10 +265,11 @@ func main() {
 	darkModeMenu := fyne.NewMenuItem("Dark Mode", darkModeToggle)
 	laporBugMenu := fyne.NewMenuItem("Lapor Bug", openBugReport)
 	updateMenu := fyne.NewMenuItem("Check For Update", openUpdateFile)
+	panduanMenu := fyne.NewMenuItem("Panduan", openPanduanFile)
 
 	// Create menu bar
 	mainMenu := fyne.NewMainMenu(
-		fyne.NewMenu("Options", aboutMenu, darkModeMenu, laporBugMenu, updateMenu),
+		fyne.NewMenu("Options", aboutMenu, darkModeMenu, laporBugMenu, updateMenu, panduanMenu),
 	)
 
 	// Assign menu to window
