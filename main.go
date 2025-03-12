@@ -112,8 +112,7 @@ func main() {
 
 		// Ensure file exists before overwriting
 		if _, err := os.Stat(outputPath); os.IsNotExist(err) && !(platform.Selected == "Switch") {
-			fmt.Println("File does not exist: ", outputPath)
-			dialog.ShowError(fmt.Errorf("File does not exist: %s", outputPath), w)
+			dialog.ShowError(fmt.Errorf("File does not exist!"), w)
 			return
 		}
 
@@ -163,7 +162,7 @@ func main() {
 		// Ensure file exists before overwriting
 		if _, err := os.Stat(outputPath); os.IsNotExist(err) && !(platform.Selected == "Switch") {
 			fmt.Println("File does not exist: %s", outputPath)
-			dialog.ShowError(fmt.Errorf("File does not exist: %s", outputPath), w)
+			dialog.ShowError(fmt.Errorf("File does not exist!"), w)
 			return
 		}
 
