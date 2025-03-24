@@ -29,7 +29,7 @@ var patchResource []byte
 //go:embed resources/edited-localization-string-tables-english(en)_assets_all.bundle
 var patchResourceSwitch []byte
 
-//go:embed resources/edited-localization-string-tables-english(en)_assets_all-switch.bundle
+//go:embed resources/original-localization-string-tables-english(en)_assets_all.bundle
 var restoreResourcePc []byte
 
 //go:embed resources/original-localization-string-tables-english(en)_assets_all-switch.bundle
@@ -172,7 +172,7 @@ func main() {
 			println("Error:", err)
 			dialog.ShowError(err, w)
 		} else {
-			dialog.ShowInformation("Success", fmt.Sprintf("File patched successfully!"), w)
+			dialog.ShowInformation("Success", fmt.Sprintf("File restore successfully!"), w)
 		}
 	}
 
@@ -301,13 +301,14 @@ func (c *CustomTheme) Icon(n fyne.ThemeIconName) fyne.Resource {
 func showLicenseWindow(a fyne.App) {
 
 	aboutText := `
-Eiyuden Patch Tool v1.0.0
+Eiyuden Patch Tool v1.0.0+b240325
+Only For Eiyuden v1.0.7 (Latest version 2025)
 
 Presented: Koda Translation
 
 Credit :
 - Baslipro (Lead, Translator, Playtester)
-- Sazanka (Translator, Playtester)
+- kmk (Translator, Playtester)
 - Mr. C (Translator, Playtester, Programmer)
 - tedo (Translator)
 - Budidoom (Translator)
