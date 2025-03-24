@@ -26,7 +26,7 @@ import (
 //go:embed resources/edited-localization-string-tables-english(en)_assets_all.bundle
 var patchResource []byte
 
-//go:embed resources/edited-localization-string-tables-english(en)_assets_all.bundle
+//go:embed resources/edited-localization-string-tables-english(en)_assets_all-switch.bundle
 var patchResourceSwitch []byte
 
 //go:embed resources/original-localization-string-tables-english(en)_assets_all.bundle
