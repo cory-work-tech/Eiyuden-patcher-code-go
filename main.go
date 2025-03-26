@@ -301,7 +301,7 @@ func (c *CustomTheme) Icon(n fyne.ThemeIconName) fyne.Resource {
 func showLicenseWindow(a fyne.App) {
 
 	aboutText := `
-Eiyuden Patch Tool v1.0.0+b240325
+Eiyuden Patch Tool v1.0.0+b250326
 Only For Eiyuden v1.0.7 (Latest version 2025)
 
 Presented: Koda Translation
